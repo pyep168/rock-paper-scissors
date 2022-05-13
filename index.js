@@ -69,25 +69,25 @@ function playRound(playerSelection, computerSelection) {
 // Play the game
 function game() {
 
-    for (let round = 1; round < 6; round++) {
-        console.log("ROUND " + round);
+    // for (let round = 1; round < 5; round++) {
+    //     console.log("ROUND " + round);
 
-        // // Ask user to make a selection;
-        // let playerSelection = prompt("Rock, Paper, or Scissor?")
-        playerSelection = prompt("Enter: Rock, Paper, or Scissor").toLowerCase();
-        computerSelection = computerPlay();
+    //     // // Ask user to make a selection;
+    //     // let playerSelection = prompt("Rock, Paper, or Scissor?")
+    //     playerSelection = prompt("Enter: Rock, Paper, or Scissor").toLowerCase();
+    //     computerSelection = computerPlay();
 
-        if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissor") {
-            console.log(playRound(playerSelection, computerSelection));
-        } else {
-            console.log("Invalid selection. Please Enter: Rock, Paper, or Scissor.")
-            round--;
-        }
+    //     if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissor") {
+    //         console.log(playRound(playerSelection, computerSelection));
+    //     } else {
+    //         console.log("Invalid selection. Please Enter: Rock, Paper, or Scissor.")
+    //         round--;
+    //     }
 
-        // // playerSelection = playerSelection.toLowerCase();
-        // let computerSelection = computerPlay();
-        // console.log(playRound(playerSelection, computerSelection));
-    }
+    //     // // playerSelection = playerSelection.toLowerCase();
+    //     // let computerSelection = computerPlay();
+    //     // console.log(playRound(playerSelection, computerSelection));
+    // }
 
     if (computerScore === playerScore) {
         console.log("There are no winner and loser. You and the Computer are tied!");
@@ -124,5 +124,46 @@ function showScore() {
 
 // console.log(playRound(playerSelection,computerSelection));
 
+
+
+
+const mainContent = document.querySelector('#main-content');
+
+const scoreboardPlayer = document.createElement('div');
+scoreboardPlayer.classList.add('scoreboard');
+scoreboardPlayer.textContent = 0;
+
+mainContent.appendChild(scoreboardPlayer);
+
+const scoreboardCPU = document.createElement('div');
+scoreboardCPU.classList.add('scoreboard');
+scoreboardCPU.textContent = 0;
+
+mainContent.appendChild(scoreboardCPU);
+
+
+
+
+
+// Three buttons for each selections
+const rockBtn = document.querySelector('#rockBtn');
+const paperBtn = document.querySelector('#paperBtn');
+const scissorBtn = document.querySelector('#scissorBtn');
+
+rockBtn.addEventListener('click', () => {
+    console.log("You selected Rock");
+})
+
+paperBtn.addEventListener('click', () => {
+    console.log("You selected Paper");
+})
+
+scissorBtn.addEventListener('click', () => {
+    console.log("You selected Scissor");
+})
+
+//  Create a Counter
+//  Create message that shows what User picked
+//  
 
 game();
