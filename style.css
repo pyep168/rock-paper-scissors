@@ -1,0 +1,72 @@
+body {
+    background-color: maroon;
+}
+
+header {
+    text-align: center;
+    color: white;
+    font-family: Luminari;
+}
+
+#options {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+button {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    background: gold;
+    margin: 0 50px;
+    font-family: Luminari;
+    color: maroon;
+}
+
+#scores {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 250px 30px;
+    color: white;
+    font-family: Luminari;
+}
+
+#round-selections {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 200px 50px;
+    color: white;
+    font-family: Luminari;
+}
+
+#results {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-bottom: 50px;
+    font-family: Luminari;
+}
+
+#reset-game {
+    display: flex;
+    justify-content: center;
+}
+
+#resetGame {
+    height: 50px;
+    font-family: Luminari;
+    color: maroon;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: Luminari;
+}
