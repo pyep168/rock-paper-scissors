@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection) {
         return showScore();
     } else if (playerSelection === "Rock" && computerSelection === "Paper") {
         computerScore += 1;
-        scoreboardCPU.textContent = computerScore;
+        scoreboardCPU.textContent = "Computer's Score: " + computerScore;
         roundSelectionPlayer.textContent = 'You chose ' + playerSelection + '.';
         roundSelectionCPU.textContent = 'Computer chose ' + computerSelection + '.';
         roundResults.textContent = 'You Lose! Paper beats Rock.';
@@ -29,7 +29,7 @@ function playRound(playerSelection, computerSelection) {
         return showScore();
     } else if (playerSelection === "Rock" && computerSelection === "Scissor") {
         playerScore += 1;
-        scoreboardPlayer.textContent = playerScore;
+        scoreboardPlayer.textContent = "Player's Score: " + playerScore;
         roundSelectionPlayer.textContent = 'You chose ' + playerSelection + '.';
         roundSelectionCPU.textContent = 'Computer chose ' + computerSelection + '.';
         roundResults.textContent = 'You Win! Rock beats Scissor.';
@@ -46,7 +46,7 @@ function playRound(playerSelection, computerSelection) {
         return showScore();
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
         playerScore += 1;
-        scoreboardPlayer.textContent = playerScore;
+        scoreboardPlayer.textContent = "Player's Score: " + playerScore;
         roundSelectionPlayer.textContent = 'You chose ' + playerSelection + '.';
         roundSelectionCPU.textContent = 'Computer chose ' + computerSelection + '.';
         roundResults.textContent = 'You Win! Paper beats Rock.'
@@ -54,7 +54,7 @@ function playRound(playerSelection, computerSelection) {
         return showScore();
     } else if (playerSelection === "Paper" && computerSelection === "Scissor") {
         computerScore += 1;
-        scoreboardCPU.textContent = computerScore;
+        scoreboardCPU.textContent = "Computer's Score: " + computerScore;
         roundSelectionPlayer.textContent = 'You chose ' + playerSelection + '.';
         roundSelectionCPU.textContent = 'Computer chose ' + computerSelection + '.';
         roundResults.textContent = 'You Lose! Scissor beats Paper.';
@@ -71,7 +71,7 @@ function playRound(playerSelection, computerSelection) {
         return showScore();
     } else if (playerSelection === "Scissor" && computerSelection === "Paper") {
         playerScore += 1;
-        scoreboardPlayer.textContent = playerScore;
+        scoreboardPlayer.textContent = "Player's Score: " + playerScore;
         roundSelectionPlayer.textContent = 'You chose ' + playerSelection + '.';
         roundSelectionCPU.textContent = 'Computer chose ' + computerSelection + '.';
         roundResults.textContent = 'You Win! Scissor beats Paper.'
@@ -79,7 +79,7 @@ function playRound(playerSelection, computerSelection) {
         return showScore();
     } else if (playerSelection === "Scissor" && computerSelection === "Rock") {
         computerScore += 1;
-        scoreboardCPU.textContent = computerScore;
+        scoreboardCPU.textContent = "Computer's Score: " + computerScore;
         roundSelectionPlayer.textContent = 'You chose ' + playerSelection + '.';
         roundSelectionCPU.textContent = 'Computer chose ' + computerSelection + '.';
         roundResults.textContent = 'You Lose! Rock beats Scissor.'
@@ -172,20 +172,27 @@ const mainContent = document.querySelector('#main-content');
 const scores = document.querySelector('#scores');
 const roundSelections = document.querySelector('#round-selections');
 const results = document.querySelector('#results');
-const resetGame = document.querySelector('#reset-game')
+const resetGame = document.querySelector('#reset-game');
+const rules = document.querySelector('#rules');
 
+//  Instructions
+const instructions = document.createElement('h3');
+instructions.setAttribute("id", "instructions");
+instructions.textContent = "Select a button. Game ends when a player reaches to 5 points."
+
+rules.appendChild(instructions);
 
 //  Player Scoreboard
 const scoreboardPlayer = document.createElement('div');
 scoreboardPlayer.setAttribute("id", "scoreboardPlayer");
-scoreboardPlayer.textContent = playerScore;
+scoreboardPlayer.textContent = "Player's Score: " + playerScore;
 
 scores.appendChild(scoreboardPlayer);
 
 //  Computer Scoreboard
 const scoreboardCPU = document.createElement('div');
 scoreboardCPU.setAttribute("id", "scoreboardCPU");
-scoreboardCPU.textContent = computerScore;
+scoreboardCPU.textContent = "Computer's Score: " + computerScore;
 
 scores.appendChild(scoreboardCPU);
 

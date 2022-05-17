@@ -8,6 +8,12 @@ header {
     font-family: Luminari;
 }
 
+h3 {
+    text-align: center;
+    color: white;
+    font-family: Luminari;
+}
+
 #options {
     text-align: center;
     margin-top: 10%;
@@ -28,7 +34,7 @@ button {
     text-align: center;
     display: flex;
     justify-content: space-between;
-    margin: 0 250px 30px;
+    margin: 0 200px 30px;
     color: white;
     font-family: Luminari;
 }
@@ -37,7 +43,7 @@ button {
     text-align: center;
     display: flex;
     justify-content: space-between;
-    margin: 0 200px 50px;
+    margin: 0 200px 60px;
     color: white;
     font-family: Luminari;
 }
