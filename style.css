@@ -14,14 +14,21 @@ h3 {
     font-family: Luminari;
 }
 
+#currentRound{
+    text-align: center;
+    margin-top: 40px;
+    color: gold;
+    font-family: Luminari;
+    font-size: 20px;
+}
+
 #options {
     text-align: center;
-    margin-top: 10%;
+    margin-top: 7.5%;
     margin-bottom: 10%;
 }
 
-button {
-    display: inline-block;
+.buttons {
     width: 80px;
     height: 30px;
     background: gold;
@@ -35,8 +42,9 @@ button {
     display: flex;
     justify-content: space-between;
     margin: 0 200px 30px;
-    color: white;
+    color: gold;
     font-family: Luminari;
+    font-size: 20px;
 }
 
 #round-selections {
@@ -56,14 +64,21 @@ button {
     font-family: Luminari;
 }
 
+#gameResults {
+    color: gold;
+    font-family: Luminari;
+    font-size: 40px;
+}
+
 #reset-game {
     display: flex;
     justify-content: center;
 }
 
-#resetGame {
+#resetGameBtn {
     height: 50px;
     font-family: Luminari;
+    background: gold;
     color: maroon;
 }
 
