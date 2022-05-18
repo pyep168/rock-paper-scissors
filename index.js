@@ -237,18 +237,11 @@ roundResults.setAttribute('id', 'roundResults');
 
 results.appendChild(roundResults);
 
-// //  Game Results
-// const gameResults = document.createElement('div');
-// gameResults.setAttribute('id', 'gameResults');
-
-// roundSelections.appendChild(gameResults);
-
 //  Reset Game
 const resetGameBtn = document.createElement('button');
 resetGameBtn.setAttribute('id', 'resetGameBtn');
 
 resetGame.appendChild(resetGameBtn);
-
 
 
 //  Announce a winner of the game once a player reaches 5 points
@@ -295,7 +288,6 @@ function endGame() {
         options.appendChild(gameResults);
     }
 }
-
 
 game();
 
